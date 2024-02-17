@@ -1,0 +1,1 @@
+cmd='/home/antonio/Documents/Projects/matter_ws/esp/esp-matter/connectedhomeip/connectedhomeip/.environment/cipd/packages/pigweed/gn;--root=/home/antonio/Documents/Projects/matter_ws/esp/esp-matter/connectedhomeip/connectedhomeip/config/esp32;gen;--check;--fail-on-unused-args;/home/antonio/Documents/Projects/matter_ws/light/build/esp-idf/chip'

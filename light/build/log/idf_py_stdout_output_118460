@@ -1,0 +1,87 @@
+-- IDF_TARGET is not set, guessed 'esp32' from sdkconfig '/home/antonio/Documents/Projects/matter_ws/light/sdkconfig'
+-- Found Git: /usr/bin/git (found version "2.34.1") 
+-- Component directory /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/examples/common/blemesh_platform does not contain a CMakeLists.txt file. No component will be added
+-- Component directory /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/examples/common/external_platform does not contain a CMakeLists.txt file. No component will be added
+-- Component directory /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/examples/common/relinker does not contain a CMakeLists.txt file. No component will be added
+-- Component directory /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/examples/common/utils does not contain a CMakeLists.txt file. No component will be added
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /home/antonio/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/antonio/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/antonio/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building ESP-IDF components for target esp32
+NOTICE: Skipping optional dependency: espressif/cmake_utilities
+Processing 29 dependencies:
+[1/29] espressif/button (3.2.0)
+[2/29] espressif/cbor (0.6.0~1)
+[3/29] espressif/cmake_utilities (0.5.3)
+[4/29] espressif/esp-serial-flasher (0.0.11)
+[5/29] espressif/esp_bsp_generic (1.1.2)
+[6/29] espressif/esp_diag_data_store (1.0.1)
+[7/29] espressif/esp_diagnostics (1.0.2)
+[8/29] espressif/esp_encrypted_img (2.1.0)
+[9/29] espressif/esp_insights (1.0.1)
+[10/29] espressif/esp_lcd_gc9a01 (1.2.0)
+[11/29] espressif/esp_lcd_ili9341 (1.2.0)
+[12/29] espressif/esp_lcd_touch (1.1.1)
+[13/29] espressif/esp_lcd_touch_cst816s (1.0.3)
+[14/29] espressif/esp_lcd_touch_ft5x06 (1.0.6)
+[15/29] espressif/esp_lcd_touch_gt1151 (1.0.5~1)
+[16/29] espressif/esp_lcd_touch_gt911 (1.1.0)
+[17/29] espressif/esp_lcd_touch_tt21100 (1.1.0)
+[18/29] espressif/esp_lvgl_port (1.4.0)
+[19/29] espressif/esp_rcp_update (1.0.1)
+[20/29] espressif/esp_secure_cert_mgr (2.4.1)
+[21/29] espressif/jsmn (1.1.0)
+[22/29] espressif/json_generator (1.1.2)
+[23/29] espressif/json_parser (1.0.3)
+[24/29] espressif/led_indicator (0.9.1)
+[25/29] espressif/led_strip (2.5.3)
+[26/29] espressif/mdns (1.2.4)
+[27/29] espressif/rmaker_common (1.4.5)
+[28/29] idf (5.1.2)
+[29/29] lvgl/lvgl (8.3.11)
+-- Found Python3: /home/antonio/.espressif/python_env/idf5.1_py3.10_env/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+NOTICE: Skipping optional dependency: espressif/cmake_utilities
+-- Project sdkconfig file /home/antonio/Documents/Projects/matter_ws/light/sdkconfig
+Loading defaults file /home/antonio/Documents/Projects/matter_ws/light/sdkconfig.defaults...
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of time_t
+-- Check size of time_t - done
+-- Found Python3: /home/antonio/.espressif/python_env/idf5.1_py3.10_env/bin/python (found version "3.10.12") found components: Interpreter 
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS - Success
+-- App "light" version: 1.0
+-- Adding linker script /home/antonio/Documents/Projects/matter_ws/light/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+-- Adding linker script /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- BUTTON: 3.2.0
+-- LED_INDICATOR: 0.9.1
+-- ESP_LCD_GC9A01: 1.2.0
+-- ESP_LCD_ILI9341: 1.2.0
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Components: app_bridge app_reset app_trace app_update bootloader bootloader_support bt chip cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_matter esp_matter_bridge esp_matter_console esp_matter_controller esp_matter_rainmaker esp_matter_thread_br esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump espressif__button espressif__cbor espressif__cmake_utilities espressif__esp-serial-flasher espressif__esp_bsp_generic espressif__esp_diag_data_store espressif__esp_diagnostics espressif__esp_encrypted_img espressif__esp_insights espressif__esp_lcd_gc9a01 espressif__esp_lcd_ili9341 espressif__esp_lcd_touch espressif__esp_lcd_touch_cst816s espressif__esp_lcd_touch_ft5x06 espressif__esp_lcd_touch_gt1151 espressif__esp_lcd_touch_gt911 espressif__esp_lcd_touch_tt21100 espressif__esp_lvgl_port espressif__esp_rcp_update espressif__esp_secure_cert_mgr espressif__jsmn espressif__json_generator espressif__json_parser espressif__led_indicator espressif__led_strip espressif__mdns espressif__rmaker_common esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lvgl__lvgl lwip main mbedtls mqtt newlib nvs_flash openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/examples/common/app_bridge /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/examples/common/app_reset /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/app_trace /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/app_update /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/bootloader /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/bootloader_support /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/bt /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/connectedhomeip/connectedhomeip/config/esp32/components/chip /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/cmock /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/console /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/cxx /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/driver /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/efuse /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp-tls /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_adc /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_app_format /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_coex /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_common /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_eth /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_event /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_gdbstub /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_hid /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_http_client /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_http_server /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_https_ota /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_https_server /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_hw_support /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_lcd /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_local_ctrl /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/components/esp_matter /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/components/esp_matter_bridge /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/components/esp_matter_console /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/components/esp_matter_controller /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/components/esp_matter_rainmaker /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/components/esp_matter_thread_br /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_mm /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_netif /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_netif_stack /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_partition /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_phy /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_pm /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_psram /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_ringbuf /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_rom /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_system /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_timer /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esp_wifi /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/espcoredump /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__button /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__cbor /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__cmake_utilities /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp-serial-flasher /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp_bsp_generic /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp_diag_data_store /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp_diagnostics /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp_encrypted_img /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp_insights /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp_lcd_gc9a01 /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp_lcd_ili9341 /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp_lcd_touch /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp_lcd_touch_cst816s /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp_lcd_touch_ft5x06 /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp_lcd_touch_gt1151 /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp_lcd_touch_gt911 /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp_lcd_touch_tt21100 /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp_lvgl_port /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp_rcp_update /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__esp_secure_cert_mgr /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__jsmn /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__json_generator /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__json_parser /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__led_indicator /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__led_strip /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__mdns /home/antonio/Documents/Projects/matter_ws/light/managed_components/espressif__rmaker_common /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/esptool_py /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/fatfs /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/freertos /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/hal /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/heap /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/http_parser /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/idf_test /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/ieee802154 /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/json /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/log /home/antonio/Documents/Projects/matter_ws/light/managed_components/lvgl__lvgl /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/lwip /home/antonio/Documents/Projects/matter_ws/light/main /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/mbedtls /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/mqtt /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/newlib /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/nvs_flash /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/openthread /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/partition_table /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/perfmon /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/protobuf-c /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/protocomm /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/pthread /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/sdmmc /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/soc /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/spi_flash /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/spiffs /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/tcp_transport /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/ulp /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/unity /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/usb /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/vfs /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/wear_levelling /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/wifi_provisioning /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/wpa_supplicant /home/antonio/Documents/Projects/matter_ws/esp/esp-idf/components/xtensa
+-- Configuring done (35.1s)
+-- Generating done (0.4s)
+-- Build files have been written to: /home/antonio/Documents/Projects/matter_ws/light/build

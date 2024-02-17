@@ -1,0 +1,17 @@
+{
+  "gn_target_name": "//third_party/connectedhomeip/third_party/pigweed/repo/pw_allocator/py:py",
+  "inputs": [
+
+  ],
+  "setup_sources": [
+    "../../../../esp/esp-matter/connectedhomeip/connectedhomeip/config/esp32/third_party/connectedhomeip/third_party/pigweed/repo/pw_allocator/py/pyproject.toml",
+    "../../../../esp/esp-matter/connectedhomeip/connectedhomeip/config/esp32/third_party/connectedhomeip/third_party/pigweed/repo/pw_allocator/py/setup.cfg"
+  ],
+  "sources": [
+    "../../../../esp/esp-matter/connectedhomeip/connectedhomeip/config/esp32/third_party/connectedhomeip/third_party/pigweed/repo/pw_allocator/py/pw_allocator/__init__.py",
+    "../../../../esp/esp-matter/connectedhomeip/connectedhomeip/config/esp32/third_party/connectedhomeip/third_party/pigweed/repo/pw_allocator/py/pw_allocator/heap_viewer.py"
+  ],
+  "tests": [
+
+  ]
+}

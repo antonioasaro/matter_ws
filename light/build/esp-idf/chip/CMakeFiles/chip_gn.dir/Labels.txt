@@ -1,0 +1,13 @@
+# Target labels
+ chip_gn
+# Source files and their labels
+/home/antonio/Documents/Projects/matter_ws/light/build/esp-idf/chip/CMakeFiles/chip_gn
+/home/antonio/Documents/Projects/matter_ws/light/build/esp-idf/chip/CMakeFiles/chip_gn.rule
+/home/antonio/Documents/Projects/matter_ws/light/build/esp-idf/chip/CMakeFiles/chip_gn-complete.rule
+/home/antonio/Documents/Projects/matter_ws/light/build/esp-idf/chip/chip_gn-prefix/src/chip_gn-stamp/chip_gn-build.rule
+/home/antonio/Documents/Projects/matter_ws/light/build/esp-idf/chip/chip_gn-prefix/src/chip_gn-stamp/chip_gn-configure.rule
+/home/antonio/Documents/Projects/matter_ws/light/build/esp-idf/chip/chip_gn-prefix/src/chip_gn-stamp/chip_gn-download.rule
+/home/antonio/Documents/Projects/matter_ws/light/build/esp-idf/chip/chip_gn-prefix/src/chip_gn-stamp/chip_gn-install.rule
+/home/antonio/Documents/Projects/matter_ws/light/build/esp-idf/chip/chip_gn-prefix/src/chip_gn-stamp/chip_gn-mkdir.rule
+/home/antonio/Documents/Projects/matter_ws/light/build/esp-idf/chip/chip_gn-prefix/src/chip_gn-stamp/chip_gn-patch.rule
+/home/antonio/Documents/Projects/matter_ws/light/build/esp-idf/chip/chip_gn-prefix/src/chip_gn-stamp/chip_gn-update.rule

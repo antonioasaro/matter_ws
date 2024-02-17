@@ -1,0 +1,7 @@
+defines = -DNDEBUG
+framework_dirs =
+include_dirs =
+target_output_name = icd_buildconfig
+
+
+build obj/third_party/connectedhomeip/src/app/icd/icd_buildconfig.stamp: stamp || obj/third_party/connectedhomeip/src/app/icd/gen_icd_buildconfig.stamp
