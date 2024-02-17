@@ -25,7 +25,7 @@
 #include <app/server/Server.h>
 #include "driver/gpio.h"
 
-#define LED_GPIO_PIN GPIO_NUM_32
+#define LED_PIN GPIO_NUM_32
 
 static const char *TAG = "app_main";
 uint16_t light_endpoint_id = 0;
@@ -142,7 +142,11 @@ static esp_err_t app_attribute_update_cb(attribute::callback_type_t type, uint16
         app_driver_handle_t driver_handle = (app_driver_handle_t)priv_data;
         err = app_driver_attribute_update(driver_handle, endpoint_id, cluster_id, attribute_id, val);
     }
-
+    if ((type == attribute::PRE_UPDATE) && (endpoint_id = light_endpoint_id) && (cluster_id = OnOff::Id) && (attribute_id == OnOff::Attributes::OnOff::Id)) {
+        ESP_LOGI(TAG, "**** Antonio - toggle LED on/off");
+        bool new_state = val->val.b; 
+        gpio_set_level(LED_PIN, new_state);
+    }
     return err;
 }
 
@@ -157,6 +161,13 @@ extern "C" void app_main()
     app_driver_handle_t light_handle = app_driver_light_init();
     app_driver_handle_t button_handle = app_driver_button_init();
     app_reset_button_register(button_handle);
+
+    /* Initialize/flash LED gpio */
+    gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
+    vTaskDelay(100 / portTICK_PERIOD_MS);
+    gpio_set_level(LED_PIN, 1);
+    vTaskDelay(1000 / portTICK_PERIOD_MS);
+    gpio_set_level(LED_PIN, 0);
 
     /* Create a Matter node and add the mandatory Root Node device type on endpoint 0 */
     node::config_t node_config;
@@ -180,17 +191,6 @@ extern "C" void app_main()
 
     light_endpoint_id = endpoint::get_id(endpoint);
     ESP_LOGI(TAG, "Light created with endpoint_id %d", light_endpoint_id);
-
-    ESP_LOGI(TAG, "**** Antonio - starting ...");
-    gpio_set_direction(LED_GPIO_PIN, GPIO_MODE_OUTPUT);
-    vTaskDelay(500 / portTICK_PERIOD_MS);
-    ESP_LOGI(TAG, "**** Antonio - turn LED on");
-    gpio_set_level(LED_GPIO_PIN, 1);
-    vTaskDelay(1000 / portTICK_PERIOD_MS);
-    ESP_LOGI(TAG, "**** Antonio - turn LED off");
-    gpio_set_level(LED_GPIO_PIN, 0);
-    vTaskDelay(1000 / portTICK_PERIOD_MS);
-    ESP_LOGI(TAG, "**** Antonio - done.");
 
     /* Mark deferred persistence for some attributes that might be changed rapidly */
     cluster_t *level_control_cluster = cluster::get(endpoint, LevelControl::Id);
