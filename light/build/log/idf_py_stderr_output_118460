@@ -1,5 +1,0 @@
-warning: default on the choice symbol SEC_CERT_DAC_PROVIDER (defined at /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/connectedhomeip/connectedhomeip/config/esp32/components/chip/Kconfig:860, /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/components/esp_matter/Kconfig:48) will have no effect, as defaults do not affect choice symbols
-warning: the choice symbol SEC_CERT_DAC_PROVIDER (defined at /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/connectedhomeip/connectedhomeip/config/esp32/components/chip/Kconfig:860, /home/antonio/Documents/Projects/matter_ws/esp/esp-matter/components/esp_matter/Kconfig:48) is defined with a prompt outside the choice
-Compiler supported targets: xtensa-esp32-elf
-
-ESP Insights Project commit: HEAD-HASH-NOTFOUND
