@@ -1857,3 +1857,4 @@ light/managed_components/lvgl__lvgl/tests/unity/unity_support.c
 light/managed_components/lvgl__lvgl/tests/unity/unity_support.h
 light/managed_components/lvgl__lvgl/tests/unity/unity.c
 light/managed_components/lvgl__lvgl/tests/unity/unity.h
+light/managed_components/espressif__cbor/tinycbor/Makefile
