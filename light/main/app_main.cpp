@@ -29,6 +29,12 @@
 
 static const char *TAG = "app_main";
 uint16_t light_endpoint_id = 0;
+uint16_t temp_endpoint_id = 0;
+uint16_t cont_endpoint_id = 0;
+int16_t last_temp = 500;
+bool last_cont = false;
+esp_matter_attr_val_t temp_value;
+esp_matter_attr_val_t cont_value;
 
 using namespace esp_matter;
 using namespace esp_matter::attribute;
@@ -142,7 +148,7 @@ static esp_err_t app_attribute_update_cb(attribute::callback_type_t type, uint16
         app_driver_handle_t driver_handle = (app_driver_handle_t)priv_data;
         err = app_driver_attribute_update(driver_handle, endpoint_id, cluster_id, attribute_id, val);
     }
-    if ((type == attribute::PRE_UPDATE) && (endpoint_id = light_endpoint_id) && (cluster_id = OnOff::Id) && (attribute_id == OnOff::Attributes::OnOff::Id)) {
+    if ((type == attribute::PRE_UPDATE) && (endpoint_id == light_endpoint_id) && (cluster_id == OnOff::Id) && (attribute_id == OnOff::Attributes::OnOff::Id)) {
         ESP_LOGI(TAG, "**** Antonio - toggle LED on/off");
         bool new_state = val->val.b; 
         gpio_set_level(LED_PIN, new_state);
@@ -205,6 +211,23 @@ extern "C" void app_main()
     attribute_t *color_temp_attribute = attribute::get(color_control_cluster, ColorControl::Attributes::ColorTemperatureMireds::Id);
     attribute::set_deferred_persistence(color_temp_attribute);
 
+    // Setup Temperature Sensor
+    temperature_sensor::config_t temp_config;
+    temp_config.temperature_measurement.measured_value = 2200;
+    endpoint_t *temp_endpoint = temperature_sensor::create(node, &temp_config, ENDPOINT_FLAG_NONE, NULL);
+    ABORT_APP_ON_FAILURE(temp_endpoint != nullptr, ESP_LOGE(TAG, "Failed to create extended color light endpoint"));
+    temp_endpoint_id = endpoint::get_id(temp_endpoint);
+    ESP_LOGI(TAG, "Temperature sensor created with endpoint_id %d", temp_endpoint_id);
+
+    // Setup Contact Sensor
+    contact_sensor::config_t contact_sensor_config;
+    contact_sensor_config.boolean_state.state_value = false;
+    endpoint_t *cont_endpoint = contact_sensor::create(node, &contact_sensor_config, ENDPOINT_FLAG_NONE, NULL);
+    ABORT_APP_ON_FAILURE(cont_endpoint != nullptr, ESP_LOGE(TAG, "Failed to create extended color light endpoint"));
+    cont_endpoint_id = endpoint::get_id(cont_endpoint);
+    ESP_LOGI(TAG, "Contact sensor created with endpoint_id %d", cont_endpoint_id);
+    
+
 #if CHIP_DEVICE_CONFIG_ENABLE_THREAD
     /* Set OpenThread platform config */
     esp_openthread_platform_config_t config = {
@@ -235,4 +258,13 @@ extern "C" void app_main()
 #endif
     esp_matter::console::init();
 #endif
+
+
+    for (int i=0; i<1024; i++) {
+        temp_value = esp_matter_int16(last_temp++);
+        cont_value = esp_matter_bool(last_cont); last_cont = ! last_cont;
+        attribute::update(temp_endpoint_id, TemperatureMeasurement::Id, TemperatureMeasurement::Attributes::MeasuredValue::Id, &temp_value);
+        attribute::update(cont_endpoint_id, BooleanState::Id, BooleanState::Attributes::StateValue::Id, &cont_value);
+        vTaskDelay(60000 / portTICK_PERIOD_MS);
+    }
 }
