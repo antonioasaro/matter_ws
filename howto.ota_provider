@@ -1,0 +1,1 @@
+./esp/esp-matter/connectedhomeip/connectedhomeip/out/debug/chip-ota-provider-app --filepath ./light/build/light-ota.bin 

@@ -1,0 +1,1 @@
+./esp/esp-matter/connectedhomeip/connectedhomeip/src/app/ota_image_tool.py show ./light/build/light-ota.bin 
