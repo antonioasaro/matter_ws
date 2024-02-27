@@ -260,7 +260,7 @@ extern "C" void app_main()
 #endif
 
 
-    for (int i=0; i<1024; i++) {
+    for (int i=0; i<2*1024; i++) {
         temp_value = esp_matter_int16(last_temp++);
         cont_value = esp_matter_bool(last_cont); last_cont = ! last_cont;
         attribute::update(temp_endpoint_id, TemperatureMeasurement::Id, TemperatureMeasurement::Attributes::MeasuredValue::Id, &temp_value);
