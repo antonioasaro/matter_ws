@@ -1,5 +1,5 @@
 re-commission esp32 (share device in HA)
-re-commission ota_provider(pairing onnetwork 35 2020202)
+re-commission ota_provider (pairing onnetwork 35 2020202)
 re-install ota_provider acl
 re-run announce
 

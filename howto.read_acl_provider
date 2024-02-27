@@ -1,0 +1,1 @@
+./out/debug/chip-tool accesscontrol read acl 35 0
